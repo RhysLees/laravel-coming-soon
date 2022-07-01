@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace RhysLees\ComingSoon\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ComingSoonCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-coming-soon';
 
     public $description = 'My command';
 
