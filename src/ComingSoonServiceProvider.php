@@ -2,10 +2,9 @@
 
 namespace RhysLees\ComingSoon;
 
-use Illuminate\Contracts\Http\Kernel;
+use RhysLees\ComingSoon\Commands\ComingSoonCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use RhysLees\ComingSoon\Commands\ComingSoonCommand;
 
 class ComingSoonServiceProvider extends PackageServiceProvider
 {
