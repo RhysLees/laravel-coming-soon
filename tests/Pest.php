@@ -1,8 +1,8 @@
 <?php
 
-use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Illuminate\Http\Request;
 use RhysLees\ComingSoon\Tests\TestCase;
+use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
 uses(TestCase::class)->in(__DIR__);
 
