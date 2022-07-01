@@ -1,11 +1,13 @@
 <?php
 
+use Illuminate\Http\Request;
+use RhysLees\ComingSoon\Http\Middlware\ComingSoonMiddleware;
+
 it('can redirect to coming soon page when enabled', function () {
-    $this->app['config']->set('coming-soon.enabled', true);
+    $response = (new ComingSoonMiddleware())->handle(
+        createRequest('get', '/', []),
+        fn() => new \Symfony\Component\HttpFoundation\Response()
+    );
 
-    $response = $this->get('/');
-
-    dd($response->getContent());
-
-    $response->assertRedirect('coming-soon');
+    expect($response->isRedirect(url('coming-soon')))->toBeTrue();
 });
