@@ -2,6 +2,7 @@
 
 namespace RhysLees\ComingSoon;
 
+use Illuminate\Contracts\Http\Kernel;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use RhysLees\ComingSoon\Commands\ComingSoonCommand;
@@ -18,8 +19,8 @@ class ComingSoonServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-coming-soon')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-coming-soon_table')
+            ->hasViews('laravel-coming-soon')
+            ->hasRoutes('web')
             ->hasCommand(ComingSoonCommand::class);
     }
 }
